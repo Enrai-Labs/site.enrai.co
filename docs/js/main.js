@@ -25,15 +25,37 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
   // Form submission handling
-  const contactForm = document.querySelector('.contact-form')
-  if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault()
+  const emailForm = document.getElementById('emailForm')
+  const sendEmailBtn = document.getElementById('sendEmailBtn')
 
-      // Normally you would send the form data to a server here
-      // For now, just show an alert
-      alert('Thank you for your message! We will get back to you soon.')
-      contactForm.reset()
+  if (emailForm && sendEmailBtn) {
+    sendEmailBtn.addEventListener('click', function (e) {
+      // Get form values
+      const name = document.getElementById('userName').value.trim()
+      const email = document.getElementById('userEmail').value.trim()
+      const subject = document.getElementById('emailSubject').value.trim()
+      const message = document.getElementById('emailMessage').value.trim()
+
+      // Validate form
+      if (!name || !email || !subject || !message) {
+        alert('Please fill out all fields')
+        return
+      }
+
+      // Create mailto link
+      const mailtoLink = `mailto:enrailabs@gmail.com?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(
+        'Name: ' + name + '\nEmail: ' + email + '\n\n' + message
+      )}`
+
+      // Open email client
+      window.location.href = mailtoLink
+
+      // Reset form after a short delay (after email client opens)
+      setTimeout(() => {
+        emailForm.reset()
+      }, 1000)
     })
   }
 
