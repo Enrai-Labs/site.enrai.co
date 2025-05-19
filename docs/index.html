@@ -3,13 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Enrai - DevOps & AI Consulting | Training | Solutions</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Expert DevOps and AI consulting, training, and course content creation. Enrai empowers organizations with technology excellence in DevOps, AI integration, and technical education." />
+    <meta name="keywords" content="DevOps, AI, Consulting, Training, Course Content, Enrai, Technology, Cloud, Automation, Integration, Education" />
+    <meta name="author" content="Enrai Labs" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.enrai.co/" />
     <meta property="og:image" content="images/enrai.png" />
     <meta property="og:title" content="Enrai - DevOps & AI Solutions" />
-    <meta
-      property="og:description"
-      content="Expert DevOps and AI consulting, training, and course content creation."
-    />
+    <meta property="og:description" content="Expert DevOps and AI consulting, training, and course content creation." />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Enrai - DevOps & AI Solutions" />
+    <meta name="twitter:description" content="Expert DevOps and AI consulting, training, and course content creation." />
+    <meta name="twitter:image" content="images/enrai.png" />
+    <meta name="twitter:site" content="@enrailabs" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -31,9 +45,9 @@
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Main Navigation">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="#" aria-label="Enrai Home">
           <img src="images/enrai.png" alt="Enrai Logo" class="navbar-logo" />
         </a>
         <button
@@ -50,7 +64,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="#home">Home</a>
+              <a class="nav-link active" href="#home" aria-current="page">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
@@ -64,170 +78,186 @@
     </nav>
 
     <!-- Hero Section -->
-    <header id="home" class="hero-section">
+    <header id="home" class="hero-section" role="banner">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6">
-            <div class="hero-brand mb-3">
+            <section class="hero-brand mb-3" aria-label="Enrai Branding">
               <img src="images/enrai.png" alt="Enrai" class="hero-logo mb-2" />
               <p
                 class="text-uppercase text-light small letter-spacing-lg fw-bold"
               >
                 Empowering Technology Excellence
               </p>
-            </div>
+            </section>
             <h1 class="display-4 fw-bold text-white">DevOps & AI Expertise</h1>
             <p class="lead text-light mb-4">
               Specializing in DevOps consulting, AI integration, training, and
               custom course content creation.
             </p>
-            <div class="d-flex">
-              <a href="#about" class="btn btn-primary me-3">Learn More</a>
-              <a href="#contact" class="btn btn-outline-light">Contact Us</a>
-            </div>
+            <nav aria-label="Hero Call to Action">
+              <ul class="d-flex list-unstyled gap-3 mb-0">
+                <li>
+                  <a href="#about" class="btn btn-primary">Learn More</a>
+                </li>
+                <li>
+                  <a href="#contact" class="btn btn-outline-light">Contact Us</a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
     </header>
 
     <!-- About Section -->
-    <section id="about" class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h2 class="section-heading">About Enrai</h2>
-            <p class="section-subheading">
-              Your Partner in Technology Excellence
-            </p>
-            <p>
-              Enrai is a specialized consulting firm focused on helping
-              organizations leverage DevOps practices and AI technologies to
-              drive innovation and efficiency.
-            </p>
-            <p>
-              <strong>Our core areas of expertise include:</strong>
-            </p>
-            <div class="expertise-areas mt-4 mb-4">
-              <div class="expertise-item mb-3">
-                <i class="fas fa-cogs text-primary me-2"></i>
-                <span
-                  ><strong>DevOps Consulting:</strong> Streamlining development
-                  processes and operations</span
-                >
-              </div>
-              <div class="expertise-item mb-3">
-                <i class="fas fa-brain text-primary me-2"></i>
-                <span
-                  ><strong>AI Integration:</strong> Implementing intelligent
-                  solutions for business challenges</span
-                >
-              </div>
-              <div class="expertise-item mb-3">
-                <i class="fas fa-chalkboard-teacher text-primary me-2"></i>
-                <span
-                  ><strong>Training Programs:</strong> Building team
-                  capabilities through customized learning</span
-                >
-              </div>
-              <div class="expertise-item mb-3">
-                <i class="fas fa-file-alt text-primary me-2"></i>
-                <span
-                  ><strong>Course Content Creation:</strong> Developing
-                  specialized technical educational materials</span
-                >
+    <main>
+      <section id="about" class="py-5" aria-labelledby="about-heading">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <h2 id="about-heading" class="section-heading">About Enrai</h2>
+              <p class="section-subheading">
+                Your Partner in Technology Excellence
+              </p>
+              <p>
+                Enrai is a specialized consulting firm focused on helping
+                organizations leverage DevOps practices and AI technologies to
+                drive innovation and efficiency.
+              </p>
+              <p>
+                <strong>Our core areas of expertise include:</strong>
+              </p>
+              <ul class="expertise-areas mt-4 mb-4 list-unstyled">
+                <li class="expertise-item mb-3">
+                  <i class="fas fa-cogs text-primary me-2" aria-hidden="true"></i>
+                  <span
+                    ><strong>DevOps Consulting:</strong> Streamlining development
+                    processes and operations</span
+                  >
+                </li>
+                <li class="expertise-item mb-3">
+                  <i class="fas fa-brain text-primary me-2" aria-hidden="true"></i>
+                  <span
+                    ><strong>AI Integration:</strong> Implementing intelligent
+                    solutions for business challenges</span
+                  >
+                </li>
+                <li class="expertise-item mb-3">
+                  <i class="fas fa-chalkboard-teacher text-primary me-2" aria-hidden="true"></i>
+                  <span
+                    ><strong>Training Programs:</strong> Building team
+                    capabilities through customized learning</span
+                  >
+                </li>
+                <li class="expertise-item mb-3">
+                  <i class="fas fa-file-alt text-primary me-2" aria-hidden="true"></i>
+                  <span
+                    ><strong>Course Content Creation:</strong> Developing
+                    specialized technical educational materials</span
+                  >
+                </li>
+              </ul>
+              <p>
+                We believe in the power of knowledge sharing and skills
+                development. By empowering teams with the right expertise and
+                tools, we help organizations build sustainable capabilities in
+                DevOps and AI.
+              </p>
+              <div class="mt-4">
+                <a href="#contact" class="btn btn-primary">Connect With Us</a>
               </div>
             </div>
-            <p>
-              We believe in the power of knowledge sharing and skills
-              development. By empowering teams with the right expertise and
-              tools, we help organizations build sustainable capabilities in
-              DevOps and AI.
-            </p>
-            <div class="mt-4">
-              <a href="#contact" class="btn btn-primary">Connect With Us</a>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="about-img-container">
-              <!-- Logo displayed until team photo is added -->
-              <div
-                class="about-img d-flex align-items-center justify-content-center"
-              >
-                <img src="images/enrai.png" alt="Enrai" class="about-logo" />
+            <div class="col-lg-6">
+              <div class="about-img-container">
+                <!-- Logo displayed until team photo is added -->
+                <div
+                  class="about-img d-flex align-items-center justify-content-center"
+                >
+                  <img src="images/enrai.png" alt="Enrai" class="about-logo" />
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-light">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-12">
-            <h2 class="section-heading">Contact Us</h2>
-            <p class="section-subheading">
-              Interested in our expertise? Get in touch.
-            </p>
+      <!-- Contact Section -->
+      <section id="contact" class="py-5 bg-light" aria-labelledby="contact-heading">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-12">
+              <h2 id="contact-heading" class="section-heading">Contact Us</h2>
+              <p class="section-subheading">
+                Interested in our expertise? Get in touch.
+              </p>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-lg-6 mx-auto">
+              <form class="contact-form" id="emailForm" autocomplete="on" aria-label="Contact Form">
+                <div class="mb-3">
+                  <label for="userName" class="form-label visually-hidden">Your Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="userName"
+                    placeholder="Your Name"
+                    name="userName"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="userEmail" class="form-label visually-hidden">Your Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="userEmail"
+                    placeholder="Your Email"
+                    name="userEmail"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="emailSubject" class="form-label visually-hidden">Subject</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="emailSubject"
+                    placeholder="Subject"
+                    name="emailSubject"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="emailMessage" class="form-label visually-hidden">Your Message</label>
+                  <textarea
+                    class="form-control"
+                    id="emailMessage"
+                    rows="5"
+                    placeholder="Your Message"
+                    name="emailMessage"
+                    required
+                  ></textarea>
+                </div>
+                <div class="text-center">
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-lg"
+                    id="sendEmailBtn"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-        <div class="row mt-4">
-          <div class="col-lg-6 mx-auto">
-            <form class="contact-form" id="emailForm">
-              <div class="mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="userName"
-                  placeholder="Your Name"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  type="email"
-                  class="form-control"
-                  id="userEmail"
-                  placeholder="Your Email"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="emailSubject"
-                  placeholder="Subject"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <textarea
-                  class="form-control"
-                  id="emailMessage"
-                  rows="5"
-                  placeholder="Your Message"
-                  required
-                ></textarea>
-              </div>
-              <div class="text-center">
-                <button
-                  type="button"
-                  class="btn btn-primary btn-lg"
-                  id="sendEmailBtn"
-                >
-                  Send Message
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="bg-dark text-white py-4" role="contentinfo">
       <div class="container">
         <div class="row">
           <div class="col-md-4 mb-4 mb-md-0">
@@ -243,20 +273,22 @@
             </p>
             <p class="small">© 2025 Enrai. All rights reserved.</p>
           </div>
-          <div class="col-md-4 mb-4 mb-md-0">
+          <nav class="col-md-4 mb-4 mb-md-0" aria-label="Footer Quick Links">
             <h5>Quick Links</h5>
             <ul class="list-unstyled">
               <li><a href="#home" class="text-white-50">Home</a></li>
               <li><a href="#about" class="text-white-50">About</a></li>
               <li><a href="#contact" class="text-white-50">Contact</a></li>
             </ul>
-          </div>
+          </nav>
           <div class="col-md-4">
             <h5>Connect</h5>
-            <p class="small mt-3">
-              <i class="fas fa-envelope me-2"></i> enrailabs@gmail.com
-            </p>
-            <p class="small"><i class="fas fa-globe me-2"></i> www.enrai.co</p>
+            <address class="small mt-3">
+              <i class="fas fa-envelope me-2" aria-hidden="true"></i>
+              <a href="mailto:enrailabs@gmail.com" class="text-white-50">enrailabs@gmail.com</a><br />
+              <i class="fas fa-globe me-2" aria-hidden="true"></i>
+              <a href="https://www.enrai.co" class="text-white-50">www.enrai.co</a>
+            </address>
           </div>
         </div>
       </div>
